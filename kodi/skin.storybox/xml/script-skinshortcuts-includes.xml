@@ -88,6 +88,23 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>New Stories</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">newstories</property>
+			<property name="defaultID" />
+			<property name="widgetLayout">Square</property>
+			<onclick>ActivateWindow(Music,special://profile/playlists/music/New Stories.m3u,return)</onclick>
+			<property name="path">ActivateWindow(Music,special://profile/playlists/music/New Stories.m3u,return)</property>
+			<property name="list">special://profile/playlists/music/New Stories.m3u</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">newstories</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
 	</include>
 	<include />
 	<include name="skinshortcuts-submenu">
