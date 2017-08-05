@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addon
+	id="skin.storybox"
+	version="0.0.1"
+	name="Storybox"
+	provider-name="Gianni, Rory">
+	<requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="xbmc.gui" version="5.10.0"/>
+		<import addon="script.skinshortcuts" version="1.0.8"/>
+		<import addon="script.skin.helper.service" version="1.0.60"/>
+	</requires>
+	<extension
+		point="xbmc.gui.skin"
+		debugging="false"
+		effectslowdown="1.0">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">A kodi skin for the Alyth Storybox</summary>
+		<description lang="en">An adaptation of Confluence based on a material design.</description>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum></forum>
+		<source>https://github.com/digitalWestie/storybox/</source>
+		<platform>all</platform>
+	</extension>
+</addon>

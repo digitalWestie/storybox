@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>movies</defaultID>
+		<label>342</label>
+		<label2>Common menu item</label2>
+		<icon>DefaultMovies.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+		<visible>Library.HasContent(Movies)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshows</defaultID>
+		<label>20343</label>
+		<label2>Common menu item</label2>
+		<icon>DefaultTVShows.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+		<visible>Library.HasContent(TVShows)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>About this box</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/About this box.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>New Stories</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/all.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>music</defaultID>
+		<label>Stories</label>
+		<label2>Custom item</label2>
+		<icon>DefaultMusicAlbums.png</icon>
+		<thumb />
+		<action>Action(Down)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Eras</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>Action(Down)</action>
+	</shortcut>
+</shortcuts>

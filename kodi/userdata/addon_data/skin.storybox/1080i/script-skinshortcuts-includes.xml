@@ -1,0 +1,930 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<includes>
+	<include name="skinshortcuts-mainmenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>$LOCALIZE[342]</label>
+			<label2>Common menu item</label2>
+			<icon>DefaultMovies.png</icon>
+			<thumb />
+			<property name="labelID">movies</property>
+			<property name="defaultID">movies</property>
+			<property name="widgetLayout">Poster</property>
+			<visible>[Library.HasContent(Movies)] + [Library.HasContent(Movies)]</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/titles/,return)</property>
+			<property name="list">videodb://movies/titles/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">movies</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>$LOCALIZE[20343]</label>
+			<label2>Common menu item</label2>
+			<icon>DefaultTVShows.png</icon>
+			<thumb />
+			<property name="labelID">tvshows</property>
+			<property name="defaultID">tvshows</property>
+			<property name="widgetLayout">Poster</property>
+			<visible>[Library.HasContent(TVShows)] + [Library.HasContent(TVShows)]</visible>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/,return)</property>
+			<property name="list">videodb://tvshows/titles/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">tvshows</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Stories</label>
+			<label2>Common menu item</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">stories</property>
+			<property name="defaultID">music</property>
+			<property name="widgetLayout">Poster</property>
+			<onclick>ActivateWindow(Music)</onclick>
+			<property name="path">ActivateWindow(Music)</property>
+			<property name="list">Music</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">stories</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+	</include>
+	<include />
+	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[31328]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultRecentlyAddedMovies.png</icon>
+			<thumb />
+			<property name="labelID">31328</property>
+			<property name="defaultID">31328</property>
+			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</property>
+			<property name="list">videodb://recentlyaddedmovies/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[20434]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">20434</property>
+			<property name="defaultID">20434</property>
+			<visible>[Library.HasContent(MovieSets)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/sets/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/sets/,return)</property>
+			<property name="list">videodb://movies/sets/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[369]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">369</property>
+			<property name="defaultID">369</property>
+			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/titles/,return)</property>
+			<property name="list">videodb://movies/titles/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[135]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">135</property>
+			<property name="defaultID">135</property>
+			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/genres/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/genres/,return)</property>
+			<property name="list">videodb://movies/genres/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[652]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">652</property>
+			<property name="defaultID">652</property>
+			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/years/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/years/,return)</property>
+			<property name="list">videodb://movies/years/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">1</property>
+			<label>$LOCALIZE[344]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultActor.png</icon>
+			<thumb />
+			<property name="labelID">344</property>
+			<property name="defaultID">344</property>
+			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>ActivateWindow(Videos,videodb://movies/actors/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/actors/,return)</property>
+			<property name="list">videodb://movies/actors/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">movies</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">2</property>
+			<label>$LOCALIZE[31328]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultRecentlyAddedEpisodes.png</icon>
+			<thumb />
+			<property name="labelID">31328</property>
+			<property name="defaultID">31328</property>
+			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</property>
+			<property name="list">videodb://recentlyaddedepisodes/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">tvshows</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">2</property>
+			<label>$LOCALIZE[369]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">369</property>
+			<property name="defaultID">369</property>
+			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/,return)</property>
+			<property name="list">videodb://tvshows/titles/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">tvshows</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">2</property>
+			<label>$LOCALIZE[135]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">135</property>
+			<property name="defaultID">135</property>
+			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/genres/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://tvshows/genres/,return)</property>
+			<property name="list">videodb://tvshows/genres/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">tvshows</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">2</property>
+			<label>$LOCALIZE[652]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">652</property>
+			<property name="defaultID">652</property>
+			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/years/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://tvshows/years/,return)</property>
+			<property name="list">videodb://tvshows/years/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">tvshows</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">2</property>
+			<label>$LOCALIZE[344]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultActor.png</icon>
+			<thumb />
+			<property name="labelID">344</property>
+			<property name="defaultID">344</property>
+			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/actors/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://tvshows/actors/,return)</property>
+			<property name="list">videodb://tvshows/actors/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">tvshows</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">3</property>
+			<label>Jobs and Industry</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">jobsandindustry</property>
+			<property name="defaultID" />
+			<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
+			<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
+			<property name="list">special://musicplaylists/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">3</property>
+			<label>WWII</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">wwii</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">3</property>
+			<label>Farming</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">farming</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">3</property>
+			<label>Mysterious</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">mysterious</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">3</property>
+			<label>Community Groups</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">communitygroups</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">3</property>
+			<label>Song</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">song</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
+			<label>Other</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">other</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">3</property>
+			<label>Leisure &amp; Recreation</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">leisure-recreation</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">3</property>
+			<label>People Stories</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">peoplestories</property>
+			<property name="defaultID" />
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<property name="group">stories</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-template-submenu">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-submenu-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-submenu-Master user">
+		<control id="9901" type="fixedlist">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<left>285</left>
+			<top>107</top>
+			<width>1350</width>
+			<height>60</height>
+			<onup>9000</onup>
+			<ondown>9002</ondown>
+			<itemgap>0</itemgap>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<orientation>Horizontal</orientation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<animation condition="StringCompare(Container(9901).NumItems,2) | StringCompare(Container(9901).NumItems,4)" effect="slide" end="-135,0" start="0,0" time="0">conditional</animation>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<itemlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<property name="id">$NUMBER[1]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[31328]</label>
+					<label2>$ADDON[script.skinshortcuts 32014]</label2>
+					<icon>DefaultRecentlyAddedMovies.png</icon>
+					<thumb />
+					<property name="labelID">31328</property>
+					<property name="defaultID">31328</property>
+					<visible>Library.HasContent(Movies)</visible>
+					<onclick>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</property>
+					<property name="list">videodb://recentlyaddedmovies/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="2">
+					<property name="id">$NUMBER[2]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[20434]</label>
+					<label2>$LOCALIZE[342]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">20434</property>
+					<property name="defaultID">20434</property>
+					<visible>Library.HasContent(MovieSets)</visible>
+					<onclick>ActivateWindow(Videos,videodb://movies/sets/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://movies/sets/,return)</property>
+					<property name="list">videodb://movies/sets/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="3">
+					<property name="id">$NUMBER[3]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[369]</label>
+					<label2>$LOCALIZE[342]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">369</property>
+					<property name="defaultID">369</property>
+					<visible>Library.HasContent(Movies)</visible>
+					<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://movies/titles/,return)</property>
+					<property name="list">videodb://movies/titles/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="4">
+					<property name="id">$NUMBER[4]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[135]</label>
+					<label2>$LOCALIZE[342]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">135</property>
+					<property name="defaultID">135</property>
+					<visible>Library.HasContent(Movies)</visible>
+					<onclick>ActivateWindow(Videos,videodb://movies/genres/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://movies/genres/,return)</property>
+					<property name="list">videodb://movies/genres/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="5">
+					<property name="id">$NUMBER[5]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[652]</label>
+					<label2>$LOCALIZE[342]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">652</property>
+					<property name="defaultID">652</property>
+					<visible>Library.HasContent(Movies)</visible>
+					<onclick>ActivateWindow(Videos,videodb://movies/years/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://movies/years/,return)</property>
+					<property name="list">videodb://movies/years/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="6">
+					<property name="id">$NUMBER[6]</property>
+					<property name="mainmenuid">1</property>
+					<label>$LOCALIZE[344]</label>
+					<label2>$LOCALIZE[342]</label2>
+					<icon>DefaultActor.png</icon>
+					<thumb />
+					<property name="labelID">344</property>
+					<property name="defaultID">344</property>
+					<visible>Library.HasContent(Movies)</visible>
+					<onclick>ActivateWindow(Videos,videodb://movies/actors/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://movies/actors/,return)</property>
+					<property name="list">videodb://movies/actors/</property>
+					<property name="group">movies</property>
+					<property name="isSubmenu">True</property>
+				</item>
+			</content>
+		</control>
+		<control type="group">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<include>HomeSubMenuArrows</include>
+		</control>
+		<control id="9901" type="fixedlist">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<left>285</left>
+			<top>107</top>
+			<width>1350</width>
+			<height>60</height>
+			<onup>9000</onup>
+			<ondown>9002</ondown>
+			<itemgap>0</itemgap>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<orientation>Horizontal</orientation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<animation condition="StringCompare(Container(9901).NumItems,2) | StringCompare(Container(9901).NumItems,4)" effect="slide" end="-135,0" start="0,0" time="0">conditional</animation>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<itemlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<property name="id">$NUMBER[1]</property>
+					<property name="mainmenuid">2</property>
+					<label>$LOCALIZE[31328]</label>
+					<label2>$ADDON[script.skinshortcuts 32014]</label2>
+					<icon>DefaultRecentlyAddedEpisodes.png</icon>
+					<thumb />
+					<property name="labelID">31328</property>
+					<property name="defaultID">31328</property>
+					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</property>
+					<property name="list">videodb://recentlyaddedepisodes/</property>
+					<property name="group">tvshows</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="2">
+					<property name="id">$NUMBER[2]</property>
+					<property name="mainmenuid">2</property>
+					<label>$LOCALIZE[369]</label>
+					<label2>$LOCALIZE[20343]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">369</property>
+					<property name="defaultID">369</property>
+					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/,return)</property>
+					<property name="list">videodb://tvshows/titles/</property>
+					<property name="group">tvshows</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="3">
+					<property name="id">$NUMBER[3]</property>
+					<property name="mainmenuid">2</property>
+					<label>$LOCALIZE[135]</label>
+					<label2>$LOCALIZE[20343]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">135</property>
+					<property name="defaultID">135</property>
+					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>ActivateWindow(Videos,videodb://tvshows/genres/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://tvshows/genres/,return)</property>
+					<property name="list">videodb://tvshows/genres/</property>
+					<property name="group">tvshows</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="4">
+					<property name="id">$NUMBER[4]</property>
+					<property name="mainmenuid">2</property>
+					<label>$LOCALIZE[652]</label>
+					<label2>$LOCALIZE[20343]</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">652</property>
+					<property name="defaultID">652</property>
+					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>ActivateWindow(Videos,videodb://tvshows/years/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://tvshows/years/,return)</property>
+					<property name="list">videodb://tvshows/years/</property>
+					<property name="group">tvshows</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="5">
+					<property name="id">$NUMBER[5]</property>
+					<property name="mainmenuid">2</property>
+					<label>$LOCALIZE[344]</label>
+					<label2>$LOCALIZE[20343]</label2>
+					<icon>DefaultActor.png</icon>
+					<thumb />
+					<property name="labelID">344</property>
+					<property name="defaultID">344</property>
+					<visible>Library.HasContent(TVShows)</visible>
+					<onclick>ActivateWindow(Videos,videodb://tvshows/actors/,return)</onclick>
+					<property name="path">ActivateWindow(Videos,videodb://tvshows/actors/,return)</property>
+					<property name="list">videodb://tvshows/actors/</property>
+					<property name="group">tvshows</property>
+					<property name="isSubmenu">True</property>
+				</item>
+			</content>
+		</control>
+		<control type="group">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<include>HomeSubMenuArrows</include>
+		</control>
+		<control id="9901" type="fixedlist">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<left>285</left>
+			<top>107</top>
+			<width>1350</width>
+			<height>60</height>
+			<onup>9000</onup>
+			<ondown>9002</ondown>
+			<itemgap>0</itemgap>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<orientation>Horizontal</orientation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<animation condition="StringCompare(Container(9901).NumItems,2) | StringCompare(Container(9901).NumItems,4)" effect="slide" end="-135,0" start="0,0" time="0">conditional</animation>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<itemlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="270">
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(9901)</visible>
+				</control>
+				<control type="image">
+					<height>60</height>
+					<width>270</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+				<control type="label">
+					<height>60</height>
+					<width>270</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>button</font>
+					<textcolor>text.primary</textcolor>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(9901)</visible>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<property name="id">$NUMBER[1]</property>
+					<property name="mainmenuid">3</property>
+					<label>Jobs and Industry</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">jobsandindustry</property>
+					<property name="defaultID" />
+					<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
+					<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
+					<property name="list">special://musicplaylists/</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="2">
+					<property name="id">$NUMBER[2]</property>
+					<property name="mainmenuid">3</property>
+					<label>WWII</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">wwii</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="3">
+					<property name="id">$NUMBER[3]</property>
+					<property name="mainmenuid">3</property>
+					<label>Farming</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">farming</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="4">
+					<property name="id">$NUMBER[4]</property>
+					<property name="mainmenuid">3</property>
+					<label>Mysterious</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">mysterious</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="5">
+					<property name="id">$NUMBER[5]</property>
+					<property name="mainmenuid">3</property>
+					<label>Community Groups</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">communitygroups</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="6">
+					<property name="id">$NUMBER[6]</property>
+					<property name="mainmenuid">3</property>
+					<label>Song</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">song</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="7">
+					<property name="id">$NUMBER[7]</property>
+					<property name="mainmenuid">3</property>
+					<label>Other</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">other</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="8">
+					<property name="id">$NUMBER[8]</property>
+					<property name="mainmenuid">3</property>
+					<label>Leisure &amp; Recreation</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">leisure-recreation</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+				<item id="9">
+					<property name="id">$NUMBER[9]</property>
+					<property name="mainmenuid">3</property>
+					<label>People Stories</label>
+					<label2>Custom item</label2>
+					<icon>DefaultShortcut.png</icon>
+					<thumb />
+					<property name="labelID">peoplestories</property>
+					<property name="defaultID" />
+					<onclick>noop</onclick>
+					<property name="path">noop</property>
+					<property name="list">noop</property>
+					<property name="group">stories</property>
+					<property name="isSubmenu">True</property>
+				</item>
+			</content>
+		</control>
+		<control type="group">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),stories)</visible>
+			<animation delay="250" effect="slide" end="0,0" start="0,-97" time="200" tween="quadratic">Visible</animation>
+			<animation easing="out" effect="slide" end="0,-97" start="0,0" time="200" tween="quadratic">Hidden</animation>
+			<include>HomeSubMenuArrows</include>
+		</control>
+	</include>
+</includes>

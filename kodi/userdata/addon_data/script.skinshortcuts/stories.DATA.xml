@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>About this box</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/About this box.m3u,return)</action>
+		<disabled>True</disabled>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Childhood &amp; School</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Childhood and School.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Farming</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Farming.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Community Groups</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Community Groups.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Flood</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Flood.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Jobs &amp; Industry</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Jobs and Industry.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Leisure &amp; Recreation</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Leisure and Recreation.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Mysterious</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Mysterious.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>People Stories</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/People Stories.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Songs and Poems</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Songs and Poems.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>WWI</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/World War I.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>WWII</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/World War II.m3u,return)</action>
+	</shortcut>
+</shortcuts>

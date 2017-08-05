@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Distant Past</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Distant Past.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Living Memory</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Living Memory.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Present</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Present.m3u,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Future</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/Future.m3u,return)</action>
+	</shortcut>
+</shortcuts>
