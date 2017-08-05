@@ -72,7 +72,7 @@ import subprocess
 import sys
 import time
 import csv
-from datetime import datetime
+from datetime import datetime, timedelta
 import Adafruit_MPR121.MPR121 as MPR121
 import RPi.GPIO as GPIO
 from xbmcjson import XBMC, PLAYER_VIDEO
@@ -105,15 +105,20 @@ xbmc = XBMC("http://localhost:8080/jsonrpc", "kodi", "kodi")
 print xbmc.JSONRPC.Ping()
 maxVolume()
 
+lastRecorded = datetime.now() - timedelta(minutes=2)
+
 def enterLog(opts={}):
   xbmc.Input.Select({})
   maxVolume()
   time.sleep(1.5)
   active = xbmc.Player.GetActivePlayers()
   if (len(active['result']) != 0):
-    item = xbmc.Player.GetItem({ "playerid": active['result'][0]['playerid'],  "properties": ["title", "artist", "file"] })
-    row = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), item['result']['item']['title'], ' '.join(item['result']['item']['artist']), item['result']['item']['file']]
-    addToPlayLog(row)
+    minAgo = datetime.now() - timedelta(minutes=1)
+    if lastRecorded < minAgo
+      lastRecorded = datetime.now()
+      item = xbmc.Player.GetItem({ "playerid": active['result'][0]['playerid'],  "properties": ["title", "artist", "file"] })
+      row = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), item['result']['item']['title'], ' '.join(item['result']['item']['artist']), item['result']['item']['file']]
+      addToPlayLog(row)
 
 def logTouched(opts={}):
     print(opts)
