@@ -114,7 +114,7 @@ def enterLog(opts={}):
   active = xbmc.Player.GetActivePlayers()
   if (len(active['result']) != 0):
     minAgo = datetime.now() - timedelta(minutes=1)
-    if lastRecorded < minAgo
+    if lastRecorded < minAgo:
       lastRecorded = datetime.now()
       item = xbmc.Player.GetItem({ "playerid": active['result'][0]['playerid'],  "properties": ["title", "artist", "file"] })
       row = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), item['result']['item']['title'], ' '.join(item['result']['item']['artist']), item['result']['item']['file']]
