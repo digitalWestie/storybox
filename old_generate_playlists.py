@@ -10,7 +10,7 @@ import time
 #print song
 
 playlists = { 'all': [] }
-storage_path = '/home/digitalwestie/Code/storybox/'
+storage_path = '/media/pi/storybox/'
 recordings_path = storage_path + 'recordings/'
 csv_path =  recordings_path + 'recordings.csv'
 
@@ -22,7 +22,7 @@ def writePlaylist(playlist, filepaths):
   for path in filepaths:
     song = ID3(path)
     target.write("\n")
-    trackline = "#EXTINF:" + str(getDuration(path)) + "," + song["TITLE"] + " - " + song["ARTIST"]
+    trackline = "#EXTINF:" + str(getDuration(path)) + "," song["DATE"] + ": " + song["TITLE"] + " - " + song["ARTIST"]
     target.write(trackline.strip())
     target.write("\n")
     target.write(path)
@@ -38,8 +38,8 @@ def getDuration(path):
 def tagRecording(recording):
   song = ID3(recordings_path+recording[0]+'.wav')
   song["ARTIST"] = recording[1]
-  song["TITLE"] = recording[5] + ": " + recording[2]
-  #song["DATE"] = recording[5] # not settable with ID3 
+  song["TITLE"] = recording[2]
+  song["DATE"] = recording[5]
   song["GENRE"] = 37
   return True
 
