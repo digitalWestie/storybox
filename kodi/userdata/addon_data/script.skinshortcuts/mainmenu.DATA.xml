@@ -27,14 +27,6 @@
 		<action>ActivateWindow(Music,special://profile/playlists/music/About this box.m3u,return)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID />
-		<label>New Stories</label>
-		<label2>Custom item</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>ActivateWindow(Music,special://profile/playlists/music/all.m3u,return)</action>
-	</shortcut>
-	<shortcut>
 		<defaultID>music</defaultID>
 		<label>Stories</label>
 		<label2>Custom item</label2>
@@ -49,5 +41,13 @@
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>Action(Down)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>New Stories</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music,special://profile/playlists/music/New Stories.m3u,return)</action>
 	</shortcut>
 </shortcuts>

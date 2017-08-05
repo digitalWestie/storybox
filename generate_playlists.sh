@@ -4,6 +4,6 @@ clear
 
 cd ~/storybox
 
-lxterminal -e python ~/storybox/generate_playlists.py
+python ~/storybox/generate_playlists.py
 
-lxterminal -e ~/storybox/move_playlists.sh
+sh ~/storybox/move_playlists.sh
